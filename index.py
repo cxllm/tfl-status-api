@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def root():
-    return redirect("https://github.com/cxllm/tfl-status-api#README")
+    return redirect("https://github.com/cxllm/tfl-status-api#tfl-status-api")
 
 
 @app.route("/underground")
