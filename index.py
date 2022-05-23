@@ -1,5 +1,5 @@
 import json
-from flask import Flask, jsonify
+from flask import Flask, jsonify, redirect
 from util.underground import underground, planned_closures
 from util.bikes import bikes
 
@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def root():
-    return jsonify({"documentation": "https://github.com/cxllm/tfl-status-api#README"})
+    return redirect("https://github.com/cxllm/tfl-status-api#README")
 
 
 @app.route("/underground")
