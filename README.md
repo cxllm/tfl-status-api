@@ -4,7 +4,8 @@ Currently has a limited scope of functionality, can be used for current Undergro
 
 ## Underground Status Checker
 
-`https://tfl.cxllm.co.uk/underground`
+[`https://tfl.cxllm.co.uk/underground`](https://tfl.cxllm.co.uk/underground)
+
 Returns an object with two keys:
 
 ```json
@@ -69,7 +70,7 @@ For example, these were the planned closures for the Victoria Line for 28/05/202
 
 ## Santander Bike Hire
 
-`https://tfl.cxllm.co.uk/bikes`
+[`https://tfl.cxllm.co.uk/bikes`](https://tfl.cxllm.co.uk/bikes)
 
 With this you can find up-to-date information on the Santander Bike Hire scheme, finding out the co-ordinates of all the stations, and how many bikes are available there, and how many docks there are in total.
 
