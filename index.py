@@ -8,6 +8,14 @@ CORS().init_app(app, resources={r"*": {"origins": "*"}})
 app.config["CORS_HEADERS"] = "Content-Type"
 
 
+@app.after_request
+def after_request(response):
+    header = response.headers
+    header["Access-Control-Allow-Origin"] = "*"
+    response.headers.add("Access-Control-Allow-Origin", "*")
+    return response
+
+
 @app.route("/")
 @cross_origin(origins="*")
 def root():
