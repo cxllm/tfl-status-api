@@ -1,9 +1,11 @@
 from flask import Flask, jsonify, redirect
-from flask_cors import cross_origin
+from flask_cors import cross_origin, CORS
 from util.underground import underground, planned_closures
 from util.bikes import bikes
 
 app = Flask(__name__)
+CORS(app, resource={r"/*": {"origins": "*"}})
+app.config["CORS_HEADERS"] = "Content-Type"
 
 
 @app.route("/")
