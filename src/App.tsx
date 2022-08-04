@@ -30,7 +30,7 @@ class App extends React.Component<
 		};
 	}
 	getData() {
-		return fetch("/underground")
+		return fetch("https://tfl-status-api.vercel.app/underground")
 			.then((res) => res.json())
 			.then((res) => {
 				console.log(res);
