@@ -57,8 +57,7 @@ class App extends React.Component<
 					style={{
 						backgroundColor: "#12121211",
 						padding: "0",
-						textAlign: "left",
-						fontFamily: ""
+						textAlign: "left"
 					}}
 					allowZeroExpanded
 				>
