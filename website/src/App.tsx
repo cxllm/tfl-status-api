@@ -83,7 +83,7 @@ class App extends React.Component<
 											cursor: "pointer",
 											height: "15px",
 											fontSize: "15px",
-											padding: "10px 10px 10px 10px"
+											padding: "10px 0 10px 0"
 											/*width: 100%;
 											text-align: left;
 											border: none;*/
