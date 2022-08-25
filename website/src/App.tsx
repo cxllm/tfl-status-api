@@ -52,7 +52,6 @@ class App extends React.Component<
 				<h2>
 					Status for the TfL network (London Undergound, Overgound, Trams and DLR)
 				</h2>
-				<a href="https://github.com/cxllm/tfl-status-api">API usage</a>
 				<hr />
 				<Accordion
 					style={{
@@ -82,9 +81,9 @@ class App extends React.Component<
 											backgroundColor: "inherit",
 											color: "#fff",
 											cursor: "pointer",
-											height: "40px",
-											fontSize: "medium",
-											padding: "15px"
+											height: "15px",
+											fontSize: "15px",
+											padding: "10px 10px 10px 10px"
 											/*width: 100%;
 											text-align: left;
 											border: none;*/
@@ -110,6 +109,8 @@ class App extends React.Component<
 						);
 					})}
 				</Accordion>
+				<hr />
+				<a href="https://github.com/cxllm/">API Usage</a>
 			</div>
 		);
 	}
