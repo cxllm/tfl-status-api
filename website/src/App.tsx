@@ -56,7 +56,7 @@ class App extends React.Component<
 				<Accordion
 					style={{
 						backgroundColor: "#12121211",
-						padding: "0 1%",
+						padding: "0",
 						textAlign: "left",
 						fontFamily: ""
 					}}
@@ -83,7 +83,7 @@ class App extends React.Component<
 											cursor: "pointer",
 											height: "15px",
 											fontSize: "15px",
-											padding: "10px 0 10px 0"
+											padding: "10px 10px 10px 10px"
 											/*width: 100%;
 											text-align: left;
 											border: none;*/
