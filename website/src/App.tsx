@@ -109,7 +109,7 @@ class App extends React.Component<
 					})}
 				</Accordion>
 				<hr />
-				<a href="https://github.com/cxllm/">API Usage</a>
+				<a href="https://github.com/cxllm/tfl-status-api">API Usage</a>
 			</div>
 		);
 	}
