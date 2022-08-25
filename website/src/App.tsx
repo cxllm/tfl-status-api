@@ -30,7 +30,7 @@ class App extends React.Component<
 		};
 	}
 	getData() {
-		return fetch("https://tfl-status-api.vercel.app/underground")
+		return fetch("/underground")
 			.then((res) => res.json())
 			.then((res) => {
 				console.log(res);
@@ -52,6 +52,7 @@ class App extends React.Component<
 				<h2>
 					Status for the TfL network (London Undergound, Overgound, Trams and DLR)
 				</h2>
+				<a href="https://github.com/cxllm/tfl-status-api">API usage</a>
 				<hr />
 				<Accordion
 					style={{
