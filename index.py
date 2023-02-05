@@ -1,5 +1,4 @@
 from flask import Flask, jsonify, redirect, render_template
-from flask_cors import cross_origin, CORS
 from util.underground import underground, planned_closures
 from util.bikes import bikes
 
