@@ -14,8 +14,6 @@ app.config["CORS_HEADERS"] = "Content-Type"
 
 @app.after_request
 def after_request(response):
-    header = response.headers
-    header["Access-Control-Allow-Origin"] = "*"
     response.headers.add("Access-Control-Allow-Origin", "*")
     response.headers.add("Access-Control-Allow-Headers", "*")
     response.headers.add("Access-Control-Allow-Methods", "*")
@@ -29,18 +27,14 @@ def root():
 
 @app.route("/underground")
 def underground_route():
-    response = jsonify(
+    return jsonify(
         {"current_status": underground(), "weekend_closures": planned_closures()}
     )
-    response.headers.add("Access-Control-Allow-Origin", "*")
-    return response
 
 
 @app.route("/bikes")
 def bike_route():
-    response = jsonify(bikes())
-    response.headers.add("Access-Control-Allow-Origin", "*")
-    return response
+    return jsonify(bikes())
 
 
 if __name__ == "__main__":
