@@ -1,10 +1,10 @@
 # TfL Status API
 
-Currently has a limited scope of functionality, can be used for current Underground status, weekend Underground closures, and London's Santander Bike Hire Scheme to check if bikes are available at any given station. All data is taken live from the [TfL XML Unified API](https://tfl.gov.uk/info-for/open-data-users/unified-api) and converted into a JSON format that is easy to work with (hopefully). You can see it in use on the [website](https://tfl.cxllm.co.uk/)
+Currently has a limited scope of functionality, can be used for current Underground status, weekend Underground closures, and London's Santander Bike Hire Scheme to check if bikes are available at any given station. All data is taken live from the [TfL XML Unified API](https://tfl.gov.uk/info-for/open-data-users/unified-api) and converted into a JSON format that is easy to work with (hopefully). You can see it in use on the [website](https://tfl.cxllm.uk/)
 
 ## Underground Status Checker
 
-[`https://tfl.cxllm.co.uk/underground`](https://tfl.cxllm.co.uk/underground)
+[`https://tfl.cxllm.uk/underground`](https://tfl.cxllm.uk/underground)
 
 Returns an object with two keys:
 
@@ -70,7 +70,7 @@ For example, these were the planned closures for the Victoria Line for 28/05/202
 
 ## Santander Bike Hire
 
-[`https://tfl.cxllm.co.uk/bikes`](https://tfl.cxllm.co.uk/bikes)
+[`https://tfl.cxllm.uk/bikes`](https://tfl.cxllm.uk/bikes)
 
 With this you can find up-to-date information on the Santander Bike Hire scheme, finding out the co-ordinates of all the stations, and how many bikes are available there, and how many docks there are in total.
 
