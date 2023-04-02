@@ -44,12 +44,7 @@ class App extends React.Component<
 			});
 	}
 	getTime(): string {
-		let date = new Date();
-		let hours = date.getHours().toString();
-		let seconds = date.getHours().toString();
-		if (hours.length == 1) hours = "0" + hours;
-		if (seconds.length == 1) seconds = "0" + seconds;
-		return `${hours}:${seconds}`;
+		return new Date().toTimeString().split(":").splice(0,2).join(":")
 	}
 
 	componentDidMount() {
