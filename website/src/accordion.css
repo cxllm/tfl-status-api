@@ -16,7 +16,7 @@
 	background-color: #f4f4f4;
 	color: #444;
 	cursor: pointer;
-	padding: 18px;
+	padding: 15px;
 	width: 100%;
 	text-align: left;
 	border: none;
@@ -41,13 +41,16 @@
 .accordion__button[aria-selected="true"]::before {
 	transform: rotate(45deg);
 }
-
+.accordion__panel {
+	padding:0 20px 10px 20px !important;
+	font-size: 17px;
+}
 [hidden] {
 	display: none;
 }
 
 .accordion__panel {
-	padding: 10px;
+	padding: 0;
 	animation: fadein 0.35s ease-in;
 }
 

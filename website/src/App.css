@@ -20,19 +20,24 @@ h2 {
 }
 hr {
 	width: 100%;
-	margin: 20px 0;
+	margin: 10px 0;
 }
 .App {
 	background-color: #212121;
-	min-height: 100vh;
-	margin: 10px;
+	width: 90vw;
 	display: flex;
+	margin-left: auto;
+	margin-right: auto;
 	flex-direction: column;
 	justify-content: center;
 	font-size: calc(10px + 2vmin);
 	color: white;
 	text-align: center;
-	font-family: "Poppins";
+	font-family: "Poppins", sans-serif;
+}
+p.time {
+	font-size: 20px;
+	margin: 5px;
 }
 
 .App-link {
@@ -46,13 +51,4 @@ a {
 	text-align: center;
 	padding-left: 0;
 	text-decoration: none;
-}
-
-@keyframes App-logo-spin {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
 }

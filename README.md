@@ -10,7 +10,7 @@
       - [Specifying Postcode](#specifying-postcode)
       - [Specifying Co-ordinates](#specifying-co-ordinates)
 
-Currently has a limited scope of functionality, can be used for current Underground status, weekend Underground closures, and London's Santander Bike Hire Scheme to check if bikes are available at any given station. All data is taken live from the [TfL XML Unified API](https://tfl.gov.uk/info-for/open-data-users/unified-api) and converted into a JSON format that is easy to work with (hopefully). You can see it in use on the [website](https://tfl.cxllm.co.uk/)
+Currently this API has a limited scope of functionality, can be used for current Underground status, weekend Underground closures, and London's Santander Bike Hire Scheme to check if bikes are available at any given station. All data is taken live from the [TfL XML Unified API](https://tfl.gov.uk/info-for/open-data-users/unified-api) and converted into a JSON format that is easy to work with (hopefully). You can see it in use on the [website](https://tfl.cxllm.co.uk/)
 
 ## Underground Status Checker
 
