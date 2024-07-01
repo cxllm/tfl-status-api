@@ -1,10 +1,20 @@
 # TfL Status API
 
+- [TfL Status API](#tfl-status-api)
+  - [Underground Status Checker](#underground-status-checker)
+    - [Current Status](#current-status)
+    - [Weekend Closures](#weekend-closures)
+  - [Santander Bike Hire](#santander-bike-hire)
+    - [Show Stations by ID number](#show-stations-by-id-number)
+    - [Show Stations by Proximity](#show-stations-by-proximity)
+      - [Specifying Postcode](#specifying-postcode)
+      - [Specifying Co-ordinates](#specifying-co-ordinates)
+
 Currently has a limited scope of functionality, can be used for current Underground status, weekend Underground closures, and London's Santander Bike Hire Scheme to check if bikes are available at any given station. All data is taken live from the [TfL XML Unified API](https://tfl.gov.uk/info-for/open-data-users/unified-api) and converted into a JSON format that is easy to work with (hopefully). You can see it in use on the [website](https://tfl.cxllm.co.uk/)
 
 ## Underground Status Checker
 
-[`https://tfl.cxllm.co.uk/underground`](https://tfl.cxllm.co.uk/underground)
+[`https://tfl.cxllm.uk/underground`](https://tfl.cxllm.uk/underground)
 
 Returns an object with two keys:
 
@@ -70,7 +80,9 @@ For example, these were the planned closures for the Victoria Line for 28/05/202
 
 ## Santander Bike Hire
 
-[`https://tfl.cxllm.co.uk/bikes`](https://tfl.cxllm.co.uk/bikes)
+### Show Stations by ID number
+
+[`https://tfl.cxllm.uk/bikes`](https://tfl.cxllm.uk/bikes)
 
 With this you can find up-to-date information on the Santander Bike Hire scheme, finding out the co-ordinates of all the stations, and how many bikes are available there, and how many docks there are in total.
 
@@ -90,3 +102,61 @@ The URL returns an array with all of stations in London, and each one has this d
 },
 
 ```
+
+### Show Stations by Proximity
+
+[`https://tfl.cxllm.uk/bikes/closest-stations`](https://tfl.cxllm.uk/bikes/closest-stations)
+
+With this function you can find the same information as above except this method sorts this information by proximity to the location you enter, and how far it is away (as the bird flies) from the specified postcode or co-ordinates.
+
+To use this method, you must either specify a postcode or a pair of co-ordinates.
+
+#### Specifying Postcode
+
+I used this regex to check for postcodes (the old one provided by the UK government) `/([Gg][Ii][Rr] 0[Aa]{2})|((([A-Za-z][0-9]{1,2})|(([A-Za-z][A-Ha-hJ-Yj-y][0-9]{1,2})|(([A-Za-z][0-9][A-Za-z])|([A-Za-z][A-Ha-hJ-Yj-y][0-9][A-Za-z]?))))\s?[0-9][A-Za-z]{2})/`
+
+Format:
+
+```
+https://tfl.cxllm.uk/bikes/closest-stations?postcode=YOUR POSTCODE HERE
+```
+
+Example:
+
+```
+https://tfl.cxllm.uk/bikes/closest-stations?postcode=SW1A1AA
+```
+
+#### Specifying Co-ordinates
+
+Format:
+
+```
+http://127.0.0.1:5000/bikes/closest-stations?latitude=YOUR LATITUDE&longitude=YOUR LONGITUDE
+```
+
+Example:
+
+```
+http://127.0.0.1:5000/bikes/closest-stations?latitude=51.5008349&longitude=-0.1430045
+```
+
+The URL returns an array with all of stations in London, and each one has this data format (this shows data for a Westminster station but the data format would be the same for each one):
+
+````json
+{
+        "bikes_available": 9, // Number of bikes available at this station
+        "coordinates": {
+            "latitude": 51.497998, // Co-ordinates of the station
+            "longitude": -0.14296064
+        },
+        "distances": {
+            "km": 0.31546349733679235, // Distance from the specified location
+            "miles": 0.19601986880366
+        },
+        "id": 316,
+        "name": "Warwick Row, Westminster", // Where it is located
+        "number_of_docks": 21, // Number of docking stations for bikes
+        "terminal_name": "000968" // TfL terminal name for the station
+},```
+````
